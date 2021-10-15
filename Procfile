@@ -1,1 +1,1 @@
-web gunicorn litigantedemo.wsgi
+web gunicorn proyectoLitigador.wsgi
