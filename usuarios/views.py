@@ -46,10 +46,13 @@ def usuario_registro(request):
         model.email = request.POST['email']
         model.password = contra
         model.usuario = request.POST['usuario']
+        model.primer_nombre = request.POST['primer_nombre']
+        model.primer_apellido = request.POST['primer_apellido']
+        model.ci = request.POST['ci']
         model.save()
         messages.add_message(request, messages.SUCCESS, 'Registrado sastifactoriamente. Por favor revise su correo electronico para confirmar su cuenta.')
-        datosCorreo = {"usuario": request.POST['usuario'], "email": request.POST['email']}
-        enviar_correo_registro(datosCorreo)
+        # datosCorreo = {"usuario": request.POST['usuario'], "email": request.POST['email']}
+        # enviar_correo_registro(datosCorreo)
         return HttpResponseRedirect("/")
 
 def usuario_autentificacion(request):
