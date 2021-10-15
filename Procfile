@@ -1,1 +1,1 @@
-web: gunicorn litigantedemo.wsgi --log-file -
+web gunicorn litigantedemo.wsgi
