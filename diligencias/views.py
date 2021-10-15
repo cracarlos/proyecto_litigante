@@ -71,7 +71,7 @@ def diligencia_detalles(request, id):
             token = auth_s.dumps({"id": id})
             print(token)
             # QR consulta
-            img = qrcode.make(f"http://localhost:8000/deligencia_detalles/{id}")
+            img = qrcode.make(f"https://litigantedemo.herokuapp.com/deligencia_detalles/{id}")
             f = open(f"./diligencias/static/diligencias/img/qr/{id}.png", "wb")
             img.save(f)
             f.close()
