@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <form method="post" >
+        {% csrf_token %}
+        <div class="row">
+            <div class="col-md-6 col-sm-12 mx-auto">
+                <div class="card">
+                    <div class="card-body">
+                        <h2>Registro</h2>
+                        <div class="row">
+                            <div class="form-group col-11">
+                                <label>Usuario</label>
+                                <input type="text" required maxlength="16" class="form-control" name="usuario">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-11">
+                                <label>Contraseña</label>
+                                <input type="password" required maxlength="16" class="form-control" name="password">
+                                <small id="emailHelp" class="form-text text-muted">Maximo 16 caracteres</small>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-11">
+                                <label>Correo</label>
+                                <input type="email" required class="form-control" placeholder="email@example.com" name="email">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4 mx-auto">
+                                <button type="submit" class="btn btn-primary col-12">Enviar</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 text-center mx-auto mt-3">
+                                <h6>¿Ya tienes cuenta?</h6>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 text-center mx-auto mt-3">
+                                <a href="{% url 'login' %}">Iniciar Sesión</a>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+
+            </div>
+        </div>
+        
+    </form>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block content %}
+  <form method="POST" action="{{usuario.id}}">
+    {% csrf_token %}
+      <div class="row ">
+        <div class="col-md-6 col-sm-12 mx-auto">
+          <div class="card">
+            <div class="card-body">
+              <h4>Recuperación de Contraseña</h4>
+              <div class="row">
+                <div class="col-12">
+                  <div class="form-group">
+                    <label>Nueva Contraseña</label>
+                    <input type="password" required maxlength="16" class="form-control" name="password">
+                  </div>
+                </div>                
+              </div>
+              <div class="row">
+                <div class="col-3 mx-auto">
+                    <button class="btn btn-primary" type="submit">Guardar</button>
+                </div>       
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </form>
+{% endblock %}

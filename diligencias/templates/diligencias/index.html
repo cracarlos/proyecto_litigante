@@ -1,0 +1,42 @@
+{% extends "diligencias/layout.html" %}
+{% load static %}
+{% block content %}
+<div class="row">
+  <div class="col-md-12">
+    <div class="card shadow p-3 mb-5 bg-body rounded mt-3">
+      <h2>Listado</h2>
+      <div class="card-body">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Cliente</th>
+                <th scope="col">Cédula</th>
+                <th scope="col">Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+                {% for l in listado %}
+                    <tr>
+                        <th scope="row">{{l.id}}</th>
+                        <td>{{l.cliente}}</td>
+                        <td>{{l.ci}}</td>
+                        <td>
+                          <a class="btn btn-info mb-2" href="{% url 'diligencia_detalles' l.id %}">Ver</a>
+                          <a class="btn btn-warning mb-2" href="{% url 'diligencia_editar' l.id %}" title="Proximamente...">Editar</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+         </table>
+      </div>
+      <div class="col-md-2 col-sm-4 mx-auto mb-3">
+        <a class="btn btn-success col-md-8" href="{% url 'diligencia_crear' %}" >Crear</a>
+      </div> 
+    </div>
+  </div>
+</div>
+  <div class="row">
+
+  </div>
+{% endblock %}

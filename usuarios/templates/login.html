@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+{% block content %}
+    <form method="POST">
+        {% csrf_token %}
+        <div class="row ">
+            <div class="col-md-6 col-sm-12 mx-auto mt-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h2>Iniciar Sesión</h2>
+                        <div class="row">
+                          <div class="form-group col-md-11 col-sm-12">
+                              <label>Correo</label>
+                              <input type="email" required class="form-control" placeholder="email@example.com" name="email">
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="form-group col-11">
+                              <label>Contraseña</label>
+                              <input type="password" required maxlength="16" class="form-control" name="password">
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="col-8 mx-auto">
+                              <button type="submit" class="btn btn-primary mt-2 col-12">Entrar</button>
+                          </div>
+                      </div>
+                      <!-- <div class="row">
+                          <div class="col-6 text-center mx-auto mt-3">
+                              <a href="{% url 'recuperarPassword' %}">¿Olvidastes tu Contraseña?</a>
+                          </div>
+                      </div> -->
+          
+                      <!-- <div class="row">
+                          <div class="col-6 text-center mx-auto mt-3">
+                              <a href="{% url 'registro' %}" class="btn btn-outline-primary col-12 ">Registrate</a>
+                          </div>
+                      </div> -->
+                    </div>
+                  </div>
+
+            </div>
+        </div>
+        
+    </form>
+{% if request.user.is_authenticated == True %}
+    <h2>Logeado capullo</h2>
+{{user.get_username}}
+{% endif %}
+{% endblock %}

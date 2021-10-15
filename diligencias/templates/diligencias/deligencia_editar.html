@@ -1,0 +1,183 @@
+{% extends "diligencias/layout.html" %}
+{% load static %}
+{% block content %}
+
+<div class="card shadow p-3 mb-5 bg-body rounded mt-3">
+    <div class="card-body">
+            <h2>Crear</h2>
+            <form method="POST">
+                {% csrf_token %}
+                <div class="row ">
+                    <div class=" col-md-4 mb-3">
+                        <label for="cliente" class="form-label">Cliente</label>
+                        <input type="text" class="form-control" id="cliente" name="cliente" value="{{diligencia.cliente}}">
+                    </div>
+                    <div class=" col-md-4 mb-3">
+                        <label for="ci" class="form-label">CI</label>
+                        <input type="text" class="form-control" id="ci" name="ci" maxlength="9" value="{{diligencia.ci}}">
+                    </div>
+                </div>
+                <div class="row ">
+                    <div class=" col-md-4 mb-3">
+                        <label for="fecha" class="form-label">Fecha</label>
+                        <input type="date" class="form-control" id="fecha" name="fecha" value="{{diligencia.fecha|date:'Y-m-d'}}">
+                    </div>
+                </div>
+        
+                <div class="row ">
+                    <div class=" col-md-4 mb-3">
+                        <label for="cualidad" class="form-label">Cualidad</label>
+                        <input type="text" class="form-control" id="cualidad" name="cualidad" value="{{diligencia.cualidad}}">
+                    </div>
+                </div>
+        
+                <div class="row ">
+                    <div class=" col-md-4 mb-3">
+                        <label for="delitos" class="form-label">Delitos</label>
+                        <input type="text" class="form-control" id="delitos" name="delitos" value="{{diligencia.delitos}}">
+                    </div>
+                </div>
+        
+                <div class="row ">
+                    <div class=" col-md-4 mb-3">
+                        <label for="contraparte" class="form-label">Contraparte</label>
+                        <input type="text" class="form-control" id="contraparte" name="contraparte" value="{{diligencia.contraparte}}">
+                    </div>
+                </div>
+        
+                <div class="row ">
+                    <div class=" col-md-4 mb-3">
+                        <label for="k" class="form-label">K</label>
+                        <input type="text" class="form-control" id="k" name="k" value="{{diligencia.k}}">
+                    </div>
+                </div>
+        
+                <div class="row ">
+                    <div class=" col-md-4 mb-3">
+                        <label for="or_policial" class="form-label">Org. Policial</label>
+                        <input type="text" class="form-control" id="or_policial" name="or_policial" value="{{diligencia.or_policial}}">
+                    </div>
+                </div>
+        
+                <div class="row ">
+                    <div class=" col-md-4 mb-3">
+                        <label for="direccion_reclusion" class="form-label">Dirección Reclusión</label>
+                        <input type="text" class="form-control" id="direccion_reclusion" name="direccion_reclusion" value="{{diligencia.direccion_reclusion}}">
+                    </div>
+                </div>
+        
+                <div class="row ">
+                    <div class=" col-md-4 mb-3">
+                        <label for="juzgado" class="form-label">Juzgado</label>
+                        <input type="text" class="form-control" id="juzgado" name="juzgado" value="{{diligencia.juzgado}}">
+                    </div>
+                </div>
+        
+                <div class="row ">
+                    <div class=" col-md-4 mb-3">
+                        <label for="juez" class="form-label">Juez</label>
+                        <input type="text" class="form-control" id="juez" name="juez" value="{{diligencia.juez}}">
+                    </div>
+                </div>
+        
+                <div class="row ">
+                    <div class=" col-md-4 mb-3">
+                        <label for="secretario" class="form-label">Secretario (a)</label>
+                        <input type="text" class="form-control" id="secretario" name="secretario" value="{{diligencia.secretario}}">
+                    </div>
+                </div>
+        
+                <div class="row ">
+                    <div class=" col-md-4 mb-3">
+                        <label for="fiscalia" class="form-label">Fiscalía</label>
+                        <input type="text" class="form-control" id="fiscalia" name="fiscalia" value="{{diligencia.fiscalia}}">
+                    </div>
+                </div>
+        
+                <div class="row ">
+                    <div class=" col-md-4 mb-3">
+                        <label for="ubicacion" class="form-label">Ubicación</label>
+                        <textarea name="ubicacion" id="ubicacion" rows="10" cols="50">{{diligencia.ubicacion}}</textarea>
+                    </div>
+                </div>
+        
+                <div class="row ">
+                    <div class=" col-md-4 mb-3">
+                        <label for="fiscal" class="form-label">Fiscal</label>
+                        <input type="text" class="form-control" id="fiscal" name="fiscal" value="{{diligencia.fiscal}}">
+                    </div>
+                </div>
+        
+                <div class="row ">
+                    <div class=" col-md-4 mb-3">
+                        <label for="mp" class="form-label">MP</label>
+                        <input type="text" class="form-control" id="mp" name="mp" value="{{diligencia.mp}}">
+                    </div>
+                </div>
+        
+                <div class="row ">
+                    <div class=" col-md-4 mb-3">
+                        <label for="causa" class="form-label">Causa</label>
+                        <input type="text" class="form-control" id="causa" name="causa" value="{{diligencia.causa}}">
+                    </div>
+                </div>
+        
+                <div class="row ">
+                    <div class=" col-md-4 mb-3">
+                        <label for="pronunciamiento" class="form-label">Pronunciamiento</label>
+                        <input type="text" class="form-control" id="pronunciamiento" name="pronunciamiento" value="{{diligencia.pronunciamiento}}">
+                    </div>
+                </div>
+        
+                <div class="row ">
+                    <div class=" col-md-4 mb-3">
+                        <label for="sala" class="form-label">Sala</label>
+                        <input type="text" class="form-control" id="sala" name="sala" value="{{diligencia.sala}}">
+                    </div>
+                </div>
+        
+        
+                <div class="row ">
+                    <div class=" col-md-4 mb-3">
+                        <label for="decision" class="form-label">Decisión</label>
+                        <input type="text" class="form-control" id="decision" name="decision" value="{{diligencia.decision}}">
+                    </div>
+                </div>
+        
+        
+                <div class="row ">
+                    <div class=" col-md-4 mb-3">
+                        <label for="ejecucion" class="form-label">Ejecución</label>
+                        <input type="text" class="form-control" id="ejecucion" name="ejecucion" value="{{diligencia.ejecucion}}">
+                    </div>
+                </div>
+        
+        
+                <div class="row ">
+                    <div class=" col-md-4 mb-3">
+                        <label for="amparo" class="form-label">Amparo</label>
+                        <input type="text" class="form-control" id="amparo" name="amparo" value="{{diligencia.amparo}}">
+                    </div>
+                </div>
+        
+        
+                <div class="row ">
+                    <div class=" col-md-4 mb-3">
+                        <label for="casacion" class="form-label">Casación</label>
+                        <input type="text" class="form-control" id="casacion" name="casacion" value="{{diligencia.casacion}}">
+                    </div>
+                </div>
+        
+                <div class="row mt-4">
+                    <div class="col-md-3 col-sm-4 mx-auto">
+                        <button class="btn btn-success col-md-7" type="submit">Guardar</button>
+                    </div>       
+                    <div class="col-md-2 col-sm-4 mx-auto mb-3">
+                        <a class="btn btn-secondary col-md-8 " href="javascript: history.go(-1)" >Volver</a>
+                    </div> 
+                </div>
+            </form>
+          
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+  {% block content %}
+    {% load static %}
+    <div class="row">
+      <div class="col-4">
+        <img src="" alt="img perfil">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4 mx-auto">
+        <h3>{{user.usuario|capfirst}}</h3>  
+        <a href="{% url 'articulos_new' %}">Agregar</a>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-md-3 col-sm-12 ">
+        <p>Contactos</p>
+        <p>Contactos</p>
+        <p>Contactos</p>
+    </div>
+    <div class="col-md-9">
+      {% for articulo in articulos %} 
+          <div class="col-md-6">
+              <div class="card">
+                <img src="/media/{{articulo.imagen}}" class="card-img-top" alt="{{articulo.nombre_articulo}}">
+                <div class="card-body">
+                  <h5 class="card-title">{{articulo.nombre_articulo}}</h5>
+                  <p class="card-text">{{articulo.detalles_articulo}}</p>
+                </div>
+              </div>
+          </div>
+        {% endfor %}
+    </div>
+      
+
+        
+    </div>
+
+  {% endblock %}
+
+ 

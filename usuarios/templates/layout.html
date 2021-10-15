@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      {% load static %}
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Proyecto Litigador</title>
+      <link href="{% static 'diligencias/vendor/bootstrap-5.0.0-beta2-dist/css/bootstrap.min.css'%}" type="text/css" rel="stylesheet" media="screen,projection"/>
+      <link href="{% static 'diligencias/vendor/bootstrap-5.0.0-beta2-dist/css/bootstrap-utilities.min.css'%}" type="text/css" rel="stylesheet" media="screen,projection"/>
+      <link href="{% static 'diligencias/vendor/bootstrap-5.0.0-beta2-dist/css/bootstrap-reboot.min.css'%}" type="text/css" rel="stylesheet" media="screen,projection"/>
+      <link href="{% static 'diligencias/css/styles.css'%}" type="text/css" rel="stylesheet" media="screen,projection"/>	
+    </head>
+    <body>
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                {% block head %} {% include "diligencias/alerts.html" %} {% endblock %}
+                <div class="container">
+                    {% block content %}{% endblock %}
+                </div>
+            </div>
+        </div>
+
+      <script type="text/javascript" src="{% static 'diligencias/js/jQuery-3-06.js' %}"></script> 
+      <script type="text/javascript" src="{% static 'diligencias/vendor/bootstrap-5.0.0-beta2-dist/js/bootstrap.bundle.min.js' %}"></script> 
+    </body>
+  </html>

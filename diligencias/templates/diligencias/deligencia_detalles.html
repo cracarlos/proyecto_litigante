@@ -1,0 +1,209 @@
+{% extends "diligencias/layout.html" %}
+{% load static %}
+{% block content %}
+<div class="row">
+    <div class="col-md-12">
+        <div class="card shadow p-3 mb-5 bg-body rounded mt-3" >
+            <div class="card-body">
+                <h5 class="card-title">Detalles</h5>
+                <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <label><b>Cliente</b></label>
+                        <p class="card-text">
+                            {{diligencia.cliente}}
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label><b>Cédula</b></label>
+                        <p class="card-text">
+                            {{diligencia.ci}}
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label><b>Fecha</b></label>
+                        <p class="card-text">
+                            {{diligencia.fecha}}
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label><b>Cualidad</b></label>
+                        <p class="card-text">
+                            {{diligencia.cualidad}}
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label><b>Delitos</b></label>
+                        <p class="card-text">
+                            {{diligencia.delitos}}
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label><b>Contraparte</b></label>
+                        <p class="card-text">
+                            {{diligencia.contraparte}}
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label><b>K</b></label>
+                        <p class="card-text">
+                            {{diligencia.k}}
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label><b>Org. Policial</b></label>
+                        <p class="card-text">
+                            {{diligencia.or_policial}}
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label><b>Dirección Reclusión</b></label>
+                        <p class="card-text">
+                            {{diligencia.direccion_reclusion}}
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label><b>Juzgado</b></label>
+                        <p class="card-text">
+                            {{diligencia.juzgado}}
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label><b>Secretario (a)</b></label>
+                        <p class="card-text">
+                            {{diligencia.secretario}}
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label><b>Fiscalia</b></label>
+                        <p class="card-text">
+                            {{diligencia.fiscalia}}
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label><b>Ubicación</b></label>
+                        <p class="card-text">
+                            {{diligencia.ubicacion}}
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label><b>Fiscal</b></label>
+                        <p class="card-text">
+                            {{diligencia.fiscal}}
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label><b>MP</b></label>
+                        <p class="card-text">
+                            {{diligencia.mp}}
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label><b>Causa</b></label>
+                        <p class="card-text">
+                            {{diligencia.causa}}
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label><b>Pronunciamiento</b></label>
+                        <p class="card-text">
+                            {{diligencia.pronunciamiento}}
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label><b>Sala</b></label>
+                        <p class="card-text">
+                            {{diligencia.sala}}
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label><b>Decisión</b></label>
+                        <p class="card-text">
+                            {{diligencia.decision}}
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label><b>Ejecución</b></label>
+                        <p class="card-text">
+                            {{diligencia.ejecucion}}
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label><b>Amparo</b></label>
+                        <p class="card-text">
+                            {{diligencia.amparo}}
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label><b>Casación</b></label>
+                        <p class="card-text">
+                            {{diligencia.casacion}}
+                        </p>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-4 mx-auto">
+                        <a href="/static/diligencias/img/qr/{{diligencia.id}}.png" download ><img class="img-thumbnail qr" src="/static/diligencias/img/qr/{{diligencia.id}}.png" title="Clic para descargar" alt="Clic para descargar"></a>
+                        <p class="text-center">QR Consulta</p>
+                    </div>
+                    <div class="col-md-4 mx-auto">
+                        <a href="/static/diligencias/img/qr/{{diligencia.id}}_detalles.png" download ><img class="img-thumbnail qr" src="/static/diligencias/img/qr/{{diligencia.id}}_detalles.png" title="Clic para descargar" alt="Clic para descargar"></a>
+                        <p class="text-center">QR Detalles</p>
+                    </div>
+                </div>   
+                <div class="row mt-3">
+                    
+                    <div class="col-md-2 col-sm-12 mx-auto mb-3">
+                        <a class="btn btn-secondary col-md-8 " href="javascript: history.go(-1)" >Volver</a>
+                    </div> 
+                    
+                </div>               
+            </div>
+        </div>
+
+    </div>
+</div>
+   
+{% endblock %}
