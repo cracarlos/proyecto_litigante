@@ -35,7 +35,7 @@ def enviar_correo_recuperar_clave(datosCorreo):
         fail_silently=False,
         )
 
-@login_required(login_url='/') 
+#@login_required(login_url='/') 
 def usuario_registro(request):
     if request.method == 'GET':
         return render(request, 'registro.html')
